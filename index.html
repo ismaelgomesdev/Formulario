@@ -5,21 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo-form.css">
 </head>
 
 <body>
-    <div>
-        <form action="index.html" class="box" method="post">
-            <h1>Login</h1>
+    <form action="index.html" class="box" method="post">
+        <div id="equipamento" class="dado">
+            <p>Equipamento</p>
             <input type="text" name="" placeholder="Username" id="user">
-            <input type="password" name="" placeholder="Password" id="password">
-            <input type="submit" value="Login" onclick="verificar()">
-        </form>
+        </div>
 
+        <div id="duracao" class="dado">
+            <p>Tempo de ducação</p>
+            <input type="number" name="" placeholder="Password" id="password">
+        </div>
 
+        <div id="codigo" class="dado">
+            <p>Código</p>
+            <input type="number" name="" placeholder="Confirmar" id="confirmarpass">
+        </div>
 
-    </div>
+        <div id="email" class="dado">
+            <p>Email do fabricante</p>
+            <input type="email" name="" placeholder="@email" id="email" required='required'>
+        </div>
+
+        <div id="descricao" class="dado">
+            <p>Descrição</p>
+            <textarea name="" id="descricao" cols="30" rows="10" placeholder="Descrição"></textarea>
+        </div id>
+
+        <div id="produto">
+            <select id="produto">
+                <option value="">Selecione</option>
+                <option value="teclado"> Teclado</option>
+                <option value="Mouse"> Mouse</option>
+                <option value="headset"> Headset</option>
+            </select>
+        </div>
+        <div id="enviar">
+            <input type="submit" value="Enviar" onclick="verificar()">
+        </div>
+
+    </form>
     <script src="script.js"></script>
 </body>
 

@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #34495e;
+}
+
+form {
+    background-color: #646ea7;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 24px;
+}
+
+div.dado {
+    display: inline-block;
+    padding: 10px;
+}
+
+input#user,
+input#password,
+input#confirmarpass,
+input#email {
+    text-align: center;
+    padding: 10px;
+    width: 400px;
+    border-radius: 12px;
+    border: 0;
+}
+
+div.dado p {
+    text-align: center;
+}
+
+div#descricao {
+    margin-left: 30px;
+}
+
+div#descricao textarea {
+    border-radius: 12px;
+    height: 50px;
+    width: 800px;
+}
+
+div#produto {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+div#produto select {
+    padding: 10px;
+}
+
+option {
+    font-size: 15px;
+}
+
+input[type='submit'] {
+    border: 0;
+    border-radius: 12px;
+    background: rgba(45, 45, 202, 0.925);
+    color: white;
+    font-size: 15px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 200px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+input[type='submit']:hover {
+    background: blue;
+}
