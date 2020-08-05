@@ -1,0 +1,98 @@
+body {
+    border: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: rgb(243, 249, 250);
+}
+
+form#formulario {
+    background-color: rgba(255, 255, 255, 0.952);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 16px 16px 48px #00000019;
+}
+
+div#imgPreview img {
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    object-fit: cover;
+}
+
+div#imgEscolher input {
+    display: none;
+}
+
+div#imgEscolher {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-right: 10px;
+    width: 130px;
+    text-align: center;
+}
+
+div#imgEscolher label {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid rgba(102, 137, 146, 0.938);
+    border-radius: 30px;
+    padding: 10px;
+}
+
+div.form-dados {
+    display: inline-block;
+    padding: 5px;
+    padding-bottom: 30px;
+}
+
+div.form-box input {
+    border: 0;
+    border-radius: 3px;
+    border: 1px solid rgba(102, 137, 146, 0.938);
+    height: 30px;
+    color: black;
+    font-size: 16px;
+    outline: none;
+}
+
+div.form-box label,
+div.form-box input {
+    display: block;
+}
+
+div.form-box label {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+div.form-box input#nome {
+    width: 400px;
+    margin-right: 35px;
+}
+
+div.form-box input#endereco {
+    width: 650px;
+}
+
+input[type='submit'] {
+    border: 0;
+    border-radius: 12px;
+    background: rgba(45, 45, 202, 0.925);
+    color: white;
+    font-size: 15px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 200px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+input[type='submit']:hover {
+    background: blue;
+}
