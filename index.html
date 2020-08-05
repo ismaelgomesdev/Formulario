@@ -3,24 +3,54 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Formulario</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
-    <div>
-        <form action="index.html" class="box" method="post">
-            <h1>Login</h1>
-            <input type="text" name="" placeholder="Username" id="user">
-            <input type="password" name="" placeholder="Password" id="password">
-            <input type="submit" value="Login" onclick="verificar()">
-        </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function previewImagem(event) {
+            let myFile = new FileReader();
+            myFile.onload = function() {
+                let imagem = document.getElementById('imagem');
+                imagem.src = myFile.result;
+            };
+            myFile.readAsDataURL(event.target.files[0])
+        };
+    </script>
 
+    <form action="index.html" id="formulario" method="POST">
+        <div id="img">
+            <div id="imgPreview">
+                <img id="imagem" src="camera.png" alt="icone-preview" height="60px" width="60px">
+            </div>
+            <div id="imgEscolher">
+                <label for="myImg">Enviar foto</label>
+                <input type="file" id="myImg" onchange="previewImagem(event)">
+            </div>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" placeholder="Nome">
+            </div>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <label for="cpf">Cpf</label>
+                <input type="number" id="cpf" placeholder="000.000.000-00">
+            </div>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <label for="endereço">Endereço</label>
+                <input type="text" id="endereco" placeholder="Rua dos Bobos, nº 0">
+            </div>
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
 
-
-    </div>
-    <script src="script.js"></script>
 </body>
 
 </html>
