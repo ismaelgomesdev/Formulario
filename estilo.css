@@ -54,9 +54,17 @@ div.form-box input {
     border-radius: 3px;
     border: 1px solid rgba(102, 137, 146, 0.938);
     height: 30px;
-    color: black;
     font-size: 16px;
     outline: none;
+    transition: 0.3s;
+    padding-left: 15px;
+    color: #314458;
+    font-family: 'Poppins', sans-serif;
+}
+
+div.form-box input:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue;
 }
 
 div.form-box label,
@@ -65,17 +73,86 @@ div.form-box input {
 }
 
 div.form-box label {
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: #464953;
+    font-weight: 400;
 }
 
 div.form-box input#nome {
+    width: 500px;
+    margin-right: 40px;
+}
+
+div.form-box input#idade {
+    margin-right: 80px;
+}
+
+div.form-box div#select-genero {
+    margin-left: 40px;
+}
+
+div.form-box select#doacao {
+    width: 215px;
+    margin-right: 70px;
+}
+
+div.form-box select#tempo-doacao {
+    width: 240px;
+    margin-right: 20px;
+}
+
+div.form-box select {
+    border: 0;
+    border-radius: 3px;
+    border: 1px solid rgba(102, 137, 146, 0.938);
+    height: 30px;
+    font-size: 16px;
+    color: #314458;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 15px;
+    width: 150px;
+    outline: none;
+}
+
+div.form-box textarea#textarea-doenca {
+    border: 0;
+    border-radius: 3px;
+    border: 1px solid rgba(102, 137, 146, 0.938);
+    height: 50px;
+    width: 270px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    padding-left: 15px;
+    color: #314458;
+    font-family: 'Poppins', sans-serif;
+}
+
+div.form-box label#contatos {
+    font-size: 40px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+div.form-box input#email {
     width: 400px;
-    margin-right: 35px;
+    margin-right: 60px;
 }
 
 div.form-box input#endereco {
-    width: 650px;
+    width: 400px;
+    margin-right: 10px;
+}
+
+div.form-box input#numero {
+    width: 50px;
+    margin-right: 10px;
+}
+
+div.form-box input#cep {
+    width: 120px;
 }
 
 input[type='submit'] {
@@ -91,6 +168,7 @@ input[type='submit'] {
     padding: 10px;
     cursor: pointer;
     transition: 0.25s;
+    outline: none;
 }
 
 input[type='submit']:hover {

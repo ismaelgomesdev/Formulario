@@ -19,6 +19,13 @@
             myFile.readAsDataURL(event.target.files[0])
         };
     </script>
+    <script>
+        function verificar() {
+            let nome = document.getElementById('nome').value
+            window.alert(nome)
+
+        }
+    </script>
 
     <form action="index.html" id="formulario" method="POST">
         <div id="img">
@@ -38,17 +45,120 @@
         </div>
         <div class="form-dados">
             <div class="form-box">
-                <label for="cpf">Cpf</label>
+                <label for="cpf">CPF</label>
                 <input type="number" id="cpf" placeholder="000.000.000-00">
             </div>
         </div>
         <div class="form-dados">
             <div class="form-box">
-                <label for="endereço">Endereço</label>
-                <input type="text" id="endereco" placeholder="Rua dos Bobos, nº 0">
+                <label for="idade">Idade</label>
+                <input type="text" id="idade" placeholder="Ex. 23">
             </div>
         </div>
-        <input type="submit" value="Enviar">
+        <div class="form-dados">
+            <div class="form-box">
+                <label for="peso">Peso</label>
+                <input type="number" id="peso" placeholder="Ex. 62">
+            </div>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <div id="select-genero">
+                    <label for="genero">Gênero</label>
+                    <select id="genero">
+                        <option value="selecione">Selecione</option>
+                        <option value="masc">Masculino</option>
+                        <option value="fem">Feminino</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <div id="select-doacao">
+                    <label for="doacao">Já doou sangue?</label>
+                    <select id="doacao">
+                        <option value="selecione">Selecione</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <div id="select-tempo-doacao">
+                    <label for="tempo-doacao">Quanto tempo está sem doar</label>
+                    <select id="tempo-doacao">
+                        <option value="selecione">Selecione</option>
+                        <option value="mes1">1 mês</option>
+                        <option value="mes2">2 meses</option>
+                        <option value="mes3">3 meses</option>
+                        <option value="mes+">Mais</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <div id="select-tipo-sangue">
+                    <label for="tipo-sangue">Tipo sanguíneo</label>
+                    <select id="tipo-sangue">
+                        <option value="selecione">Selecione</option>
+                        <option value="a+">A+</option>
+                        <option value="a-">A-</option>
+                        <option value="b+">B+</option>
+                        <option value="b-">B-</option>
+                        <option value="ab+">AB+</option>
+                        <option value="ab-">AB-</option>
+                        <option value="o+">O+</option>
+                        <option value="o-">O-</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <label for="peso">Você possui algum tipo de doença?</label>
+                <textarea id="textarea-doenca" cols="30" rows="10" placeholder="Ex. Hepatite"></textarea>
+            </div>
+        </div>
+        <div class="form-box">
+            <label for="contatos" id="contatos">Contato</label>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="nome@gmail.com">
+            </div>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" placeholder="(85)99999-9999">
+            </div>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <label for="endereco">Endeceço</label>
+                <input type="text" id="endereco" placeholder="Rua Carvalho Mota">
+            </div>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <label for="numero">Nº</label>
+                <input type="number" id="numero" placeholder="55">
+            </div>
+        </div>
+        <div class="form-dados">
+            <div class="form-box">
+                <label for="cep">CEP</label>
+                <input type="number" id="cep" placeholder="00000-000">
+            </div>
+        </div>
+
+        <input type="submit" value="Enviar" onclick="verificar()">
     </form>
 
 </body>
