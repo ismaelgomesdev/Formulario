@@ -19,13 +19,6 @@
             myFile.readAsDataURL(event.target.files[0])
         };
     </script>
-    <script>
-        function verificar() {
-            let nome = document.getElementById('nome').value
-            window.alert(nome)
-
-        }
-    </script>
 
     <form action="index.html" id="formulario" method="POST">
         <div id="img">
@@ -40,25 +33,25 @@
         <div class="form-dados">
             <div class="form-box">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" placeholder="Nome">
+                <input type="text" id="nome" placeholder="Nome" required='required'>
             </div>
         </div>
         <div class="form-dados">
             <div class="form-box">
                 <label for="cpf">CPF</label>
-                <input type="number" id="cpf" placeholder="000.000.000-00">
+                <input type="text" id="cpf" placeholder="000.000.000-00" class="regex" data-js="cpf" maxlength="14">
             </div>
         </div>
         <div class="form-dados">
             <div class="form-box">
                 <label for="idade">Idade</label>
-                <input type="text" id="idade" placeholder="Ex. 23">
+                <input type="text" id="idade" placeholder="Ex. 23" data-js="idade" class="regex">
             </div>
         </div>
         <div class="form-dados">
             <div class="form-box">
                 <label for="peso">Peso</label>
-                <input type="number" id="peso" placeholder="Ex. 62">
+                <input type="text" id="peso" placeholder="Ex. 62" data-js="peso" class="regex">
             </div>
         </div>
         <div class="form-dados">
@@ -120,8 +113,8 @@
         </div>
         <div class="form-dados">
             <div class="form-box">
-                <label for="peso">Você possui algum tipo de doença?</label>
-                <textarea id="textarea-doenca" cols="30" rows="10" placeholder="Ex. Hepatite"></textarea>
+                <label for="doenca">Você possui algum tipo de doença?</label>
+                <textarea id="doenca" cols="30" rows="10" placeholder="Ex. Hepatite"></textarea>
             </div>
         </div>
         <div class="form-box">
@@ -130,13 +123,13 @@
         <div class="form-dados">
             <div class="form-box">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="nome@gmail.com">
+                <input type="email" id="email" placeholder="exemplo@gmail.com">
             </div>
         </div>
         <div class="form-dados">
             <div class="form-box">
                 <label for="telefone">Telefone</label>
-                <input type="text" id="telefone" placeholder="(85)99999-9999">
+                <input type="text" id="telefone" class="regex" data-js="telefone" placeholder="(00) 00000-0000" maxlength="15">
             </div>
         </div>
         <div class="form-dados">
@@ -148,19 +141,19 @@
         <div class="form-dados">
             <div class="form-box">
                 <label for="numero">Nº</label>
-                <input type="number" id="numero" placeholder="55">
+                <input type="text" id="numero" placeholder="Ex. 55" data-js="numero" class="regex">
             </div>
         </div>
         <div class="form-dados">
             <div class="form-box">
                 <label for="cep">CEP</label>
-                <input type="number" id="cep" placeholder="00000-000">
+                <input type="text" id="cep" class="regex" data-js="cep" placeholder="00000-000" maxlength="9">
             </div>
         </div>
 
-        <input type="submit" value="Enviar" onclick="verificar()">
+        <input type="submit" value="Enviar">
     </form>
-
+    <script src="regex.js"></script>
 </body>
 
 </html>

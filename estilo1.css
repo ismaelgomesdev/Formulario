@@ -16,10 +16,11 @@ form#formulario {
 }
 
 div#imgPreview img {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     padding: 20px;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 div#imgEscolher input {
@@ -31,7 +32,7 @@ div#imgEscolher {
     padding-bottom: 40px;
     padding-right: 10px;
     width: 130px;
-    text-align: center;
+    margin-left: 45px;
 }
 
 div#imgEscolher label {
@@ -41,6 +42,12 @@ div#imgEscolher label {
     border: 1px solid rgba(102, 137, 146, 0.938);
     border-radius: 30px;
     padding: 10px;
+    border-color: dodgerblue;
+    transition: 0.3s;
+}
+
+div#imgEscolher label:hover {
+    background: rgb(130, 192, 253);
 }
 
 div.form-dados {
@@ -85,6 +92,10 @@ div.form-box input#nome {
     margin-right: 40px;
 }
 
+div.form-box input#cpf {
+    width: 140px;
+}
+
 div.form-box input#idade {
     margin-right: 80px;
 }
@@ -116,11 +127,11 @@ div.form-box select {
     outline: none;
 }
 
-div.form-box textarea#textarea-doenca {
+div.form-box textarea#doenca {
     border: 0;
     border-radius: 3px;
     border: 1px solid rgba(102, 137, 146, 0.938);
-    height: 50px;
+    height: 70px;
     width: 270px;
     font-size: 16px;
     outline: none;
@@ -128,6 +139,12 @@ div.form-box textarea#textarea-doenca {
     padding-left: 15px;
     color: #314458;
     font-family: 'Poppins', sans-serif;
+    resize: none;
+}
+
+div.form-box textarea#doenca:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue;
 }
 
 div.form-box label#contatos {
@@ -147,7 +164,7 @@ div.form-box input#endereco {
 }
 
 div.form-box input#numero {
-    width: 50px;
+    width: 80px;
     margin-right: 10px;
 }
 
