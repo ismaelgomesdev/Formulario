@@ -1,159 +1,209 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Formulario</title>
-    <link rel="stylesheet" href="css/estilo1.css">
-</head>
+    <link rel="stylesheet" href="css/estilo1.css" />
+  </head>
 
-<body>
+  <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        function previewImagem(event) {
-            let myFile = new FileReader();
-            myFile.onload = function() {
-                let imagem = document.getElementById('imagem');
-                imagem.src = myFile.result;
-            };
-            myFile.readAsDataURL(event.target.files[0])
+      function previewImagem(event) {
+        let myFile = new FileReader();
+        myFile.onload = function () {
+          let imagem = document.getElementById("imagem");
+          imagem.src = myFile.result;
         };
+        myFile.readAsDataURL(event.target.files[0]);
+      }
     </script>
 
     <form action="index.html" id="formulario" method="POST">
-        <div id="img">
-            <div id="imgPreview">
-                <img id="imagem" src="imagens/camera.png" alt="icone-preview" height="60px" width="60px">
-            </div>
-            <div id="imgEscolher">
-                <label for="myImg">Enviar foto</label>
-                <input type="file" id="myImg" onchange="previewImagem(event)">
-            </div>
+      <div id="img">
+        <div id="imgPreview">
+          <img
+            id="imagem"
+            src="imagens/camera.png"
+            alt="icone-preview"
+            height="60px"
+            width="60px"
+          />
         </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" placeholder="Nome" required='required'>
-            </div>
+        <div id="imgEscolher">
+          <label for="myImg">Enviar foto</label>
+          <input type="file" id="myImg" onchange="previewImagem(event)" />
         </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <label for="cpf">CPF</label>
-                <input type="text" id="cpf" placeholder="000.000.000-00" class="regex" data-js="cpf" maxlength="14">
-            </div>
-        </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <label for="idade">Idade</label>
-                <input type="text" id="idade" placeholder="Ex. 23" data-js="idade" class="regex">
-            </div>
-        </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <label for="peso">Peso</label>
-                <input type="text" id="peso" placeholder="Ex. 62" data-js="peso" class="regex">
-            </div>
-        </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <div id="select-genero">
-                    <label for="genero">Gênero</label>
-                    <select id="genero">
-                        <option value="selecione">Selecione</option>
-                        <option value="masc">Masculino</option>
-                        <option value="fem">Feminino</option>
-                        <option value="outros">Outros</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <div id="select-doacao">
-                    <label for="doacao">Já doou sangue?</label>
-                    <select id="doacao">
-                        <option value="selecione">Selecione</option>
-                        <option value="sim">Sim</option>
-                        <option value="nao">Não</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <div id="select-tempo-doacao">
-                    <label for="tempo-doacao">Quanto tempo está sem doar</label>
-                    <select id="tempo-doacao">
-                        <option value="selecione">Selecione</option>
-                        <option value="mes1">1 mês</option>
-                        <option value="mes2">2 meses</option>
-                        <option value="mes3">3 meses</option>
-                        <option value="mes+">Mais</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <div id="select-tipo-sangue">
-                    <label for="tipo-sangue">Tipo sanguíneo</label>
-                    <select id="tipo-sangue">
-                        <option value="selecione">Selecione</option>
-                        <option value="a+">A+</option>
-                        <option value="a-">A-</option>
-                        <option value="b+">B+</option>
-                        <option value="b-">B-</option>
-                        <option value="ab+">AB+</option>
-                        <option value="ab-">AB-</option>
-                        <option value="o+">O+</option>
-                        <option value="o-">O-</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <label for="doenca">Você possui algum tipo de doença?</label>
-                <textarea id="doenca" cols="30" rows="10" placeholder="Ex. Hepatite"></textarea>
-            </div>
-        </div>
+      </div>
+      <div class="form-dados">
         <div class="form-box">
-            <label for="contatos" id="contatos">Contato</label>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Nome" required="required" />
         </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="exemplo@gmail.com">
-            </div>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <label for="cpf">CPF</label>
+          <input
+            type="text"
+            id="cpf"
+            placeholder="000.000.000-00"
+            class="regex"
+            data-js="cpf"
+            maxlength="14"
+          />
         </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <label for="telefone">Telefone</label>
-                <input type="text" id="telefone" class="regex" data-js="telefone" placeholder="(00) 00000-0000" maxlength="15">
-            </div>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <label for="idade">Idade</label>
+          <input
+            type="text"
+            id="idade"
+            placeholder="Ex. 23"
+            data-js="idade"
+            class="regex"
+          />
         </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <label for="endereco">Endeceço</label>
-                <input type="text" id="endereco" placeholder="Rua Carvalho Mota">
-            </div>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <label for="peso">Peso</label>
+          <input
+            type="text"
+            id="peso"
+            placeholder="Ex. 62"
+            data-js="peso"
+            class="regex"
+          />
         </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <label for="numero">Nº</label>
-                <input type="text" id="numero" placeholder="Ex. 55" data-js="numero" class="regex">
-            </div>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <div id="select-genero">
+            <label for="genero">Gênero</label>
+            <select id="genero">
+              <option value="selecione">Selecione</option>
+              <option value="masc">Masculino</option>
+              <option value="fem">Feminino</option>
+              <option value="outros">Outros</option>
+            </select>
+          </div>
         </div>
-        <div class="form-dados">
-            <div class="form-box">
-                <label for="cep">CEP</label>
-                <input type="text" id="cep" class="regex" data-js="cep" placeholder="00000-000" maxlength="9">
-            </div>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <div id="select-doacao">
+            <label for="doacao">Já doou sangue?</label>
+            <select id="doacao">
+              <option value="selecione">Selecione</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
         </div>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <div id="select-tempo-doacao">
+            <label for="tempo-doacao">Quanto tempo está sem doar</label>
+            <select id="tempo-doacao">
+              <option value="selecione">Selecione</option>
+              <option value="mes1">1 mês</option>
+              <option value="mes2">2 meses</option>
+              <option value="mes3">3 meses</option>
+              <option value="mes+">Mais</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <div id="select-tipo-sangue">
+            <label for="tipo-sangue">Tipo sanguíneo</label>
+            <select id="tipo-sangue">
+              <option value="selecione">Selecione</option>
+              <option value="a+">A+</option>
+              <option value="a-">A-</option>
+              <option value="b+">B+</option>
+              <option value="b-">B-</option>
+              <option value="ab+">AB+</option>
+              <option value="ab-">AB-</option>
+              <option value="o+">O+</option>
+              <option value="o-">O-</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <label for="doenca">Você possui algum tipo de doença?</label>
+          <textarea
+            id="doenca"
+            cols="30"
+            rows="10"
+            placeholder="Ex. Hepatite"
+          ></textarea>
+        </div>
+        <input type="color" id="head" name="head" value="#e66465" />
+        <label for="head">Cor</label>
+      </div>
+      <div class="form-box">
+        <label for="contatos" id="contatos">Contato</label>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="exemplo@gmail.com" />
+        </div>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <label for="telefone">Telefone</label>
+          <input
+            type="text"
+            id="telefone"
+            class="regex"
+            data-js="telefone"
+            placeholder="(00) 00000-0000"
+            maxlength="15"
+          />
+        </div>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <label for="endereco">Endeceço</label>
+          <input type="text" id="endereco" placeholder="Rua Carvalho Mota" />
+        </div>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <label for="numero">Nº</label>
+          <input
+            type="text"
+            id="numero"
+            placeholder="Ex. 55"
+            data-js="numero"
+            class="regex"
+          />
+        </div>
+      </div>
+      <div class="form-dados">
+        <div class="form-box">
+          <label for="cep">CEP</label>
+          <input
+            type="text"
+            id="cep"
+            class="regex"
+            data-js="cep"
+            placeholder="00000-000"
+            maxlength="9"
+          />
+        </div>
+      </div>
 
-        <input type="submit" value="Enviar">
+      <input type="submit" value="Enviar" />
     </form>
     <script src="js/regex.js"></script>
-</body>
-
+  </body>
 </html>
