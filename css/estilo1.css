@@ -1,12 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap");
 body {
     border: 0;
     padding: 0;
     font-family: sans-serif;
     background-color: rgb(243, 249, 250);
+    background-image: url("../imagens/backg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "PT Sans Narrow", sans-serif;
 }
 
 form#formulario {
-    background-color: rgba(255, 255, 255, 0.952);
+    background-color: rgb(255, 255, 255);
     max-width: 800px;
     margin: 0 auto;
     margin-top: 40px;
@@ -42,12 +47,13 @@ div#imgEscolher label {
     border: 1px solid rgba(102, 137, 146, 0.938);
     border-radius: 30px;
     padding: 10px;
-    border-color: dodgerblue;
+    border-color: red;
     transition: 0.3s;
 }
 
 div#imgEscolher label:hover {
-    background: rgb(130, 192, 253);
+    background: rgb(153, 0, 0);
+    color: whitesmoke
 }
 
 div.form-dados {
@@ -66,12 +72,12 @@ div.form-box input {
     transition: 0.3s;
     padding-left: 15px;
     color: #314458;
-    font-family: 'Poppins', sans-serif;
+    font-family: "PT Sans Narrow", sans-serif;
 }
 
 div.form-box input:focus {
-    border-color: dodgerblue;
-    box-shadow: 0 0 8px 0 dodgerblue;
+    border-color: red;
+    box-shadow: 0 0 8px 0 red;
 }
 
 div.form-box label,
@@ -82,7 +88,7 @@ div.form-box input {
 div.form-box label {
     font-size: 18px;
     padding-bottom: 5px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "PT Sans Narrow", sans-serif;
     color: #464953;
     font-weight: 400;
 }
@@ -121,7 +127,7 @@ div.form-box select {
     height: 30px;
     font-size: 16px;
     color: #314458;
-    font-family: 'Poppins', sans-serif;
+    font-family: "PT Sans Narrow", sans-serif;
     padding-left: 15px;
     width: 150px;
     outline: none;
@@ -138,13 +144,13 @@ div.form-box textarea#doenca {
     transition: 0.3s;
     padding-left: 15px;
     color: #314458;
-    font-family: 'Poppins', sans-serif;
+    font-family: "PT Sans Narrow", sans-serif;
     resize: none;
 }
 
 div.form-box textarea#doenca:focus {
-    border-color: dodgerblue;
-    box-shadow: 0 0 8px 0 dodgerblue;
+    border-color: red;
+    box-shadow: 0 0 8px 0 red;
 }
 
 div.form-box label#contatos {
@@ -175,7 +181,7 @@ div.form-box input#cep {
 input[type='submit'] {
     border: 0;
     border-radius: 12px;
-    background: rgba(45, 45, 202, 0.925);
+    background: rgb(153, 0, 0);
     color: white;
     font-size: 15px;
     display: block;
@@ -189,5 +195,5 @@ input[type='submit'] {
 }
 
 input[type='submit']:hover {
-    background: blue;
+    background: red;
 }
