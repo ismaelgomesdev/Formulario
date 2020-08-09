@@ -20,9 +20,6 @@ form#formulario {
   box-shadow: 16px 16px 48px #00000019;
   opacity: 0;
 
-
-
-
   animation: fadeIn 1s linear forwards;
   animation-delay: 1s;
 }
@@ -210,4 +207,85 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background: red;
+}
+:root {
+  /* set variables in the root so they can be accessed everywhere */
+  --grad-color-1: #88d1e0;
+}
+
+.color-input {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: none;
+  outline: none;
+  opacity: 0;
+  margin: 50px;
+}
+
+.custom {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: -96px;
+  margin-left: 38px;
+  border: 5px solid white;
+}
+
+.custom:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 50px 5px #4e4e4e;
+}
+
+.color-input:hover {
+  cursor: pointer;
+}
+
+.color-input:hover + .custom {
+  box-shadow: 0px 0px 50px 5px #4e4e4e;
+}
+
+/* various id hacks to properly style each input element */
+#grad-input-1 {
+  margin-top: 0;
+}
+
+#custom-input-1 {
+  background-color: var(--grad-color-1);
+}
+.alinhar {
+  position: relative;
+  top: -50px;
+  margin-left: 10%;
+}
+
+footer {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  color: whitesmoke;
+}
+
+div#myFooter {
+  width: 100%;
+}
+div.box {
+  margin-left: 30px;
+  margin-top: -200px;
+}
+
+span#titulo {
+  position: relative;
+  top: -255px;
+  left: 350px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+p#subtitulo {
+  position: relative;
+  top: -240px;
+  left: 240px;
+  font-size: 20px;
+  text-align: justify;
 }
