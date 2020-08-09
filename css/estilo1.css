@@ -58,7 +58,7 @@ div#imgEscolher label {
   border: 1px solid rgba(102, 137, 146, 0.938);
   border-radius: 30px;
   padding: 10px;
-  border-color: red;
+  border-color: #c70039;
   transition: 0.3s;
 }
 
@@ -87,8 +87,8 @@ div.form-box input {
 }
 
 div.form-box input:focus {
-  border-color: red;
-  box-shadow: 0 0 8px 0 red;
+  border-color: #ff6347;
+  box-shadow: 0 0 8px 0 #ff6347;
 }
 
 div.form-box label,
@@ -143,7 +143,10 @@ div.form-box select {
   width: 150px;
   outline: none;
 }
-
+div.form-box select:focus {
+  border-color: #ff6347;
+  box-shadow: 0 0 8px 0 #ff6347;
+}
 div.form-box textarea#doenca {
   border: 0;
   border-radius: 3px;
@@ -160,12 +163,36 @@ div.form-box textarea#doenca {
 }
 
 div.form-box textarea#doenca:focus {
-  border-color: red;
-  box-shadow: 0 0 8px 0 red;
+  border-color: #ff6347;
+  box-shadow: 0 0 8px 0 #ff6347;
+}
+div.form-box textarea#vacina {
+  border: 0;
+  border-radius: 3px;
+  border: 1px solid rgba(102, 137, 146, 0.938);
+  height: 70px;
+  width: 270px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  padding-left: 15px;
+  margin-left: 70px;
+  color: #314458;
+  font-family: "PT Sans Narrow", sans-serif;
+  resize: none;
 }
 
+div.form-box textarea#vacina:focus {
+  border-color: #ff6347;
+  box-shadow: 0 0 8px 0 #ff6347;
+}
+
+#espac {
+  margin-left: 70px;
+}
 div.form-box label#contatos {
   font-size: 40px;
+  margin-top: -50px;
   margin-left: 20px;
   margin-bottom: 20px;
 }
@@ -213,6 +240,10 @@ input[type="submit"]:hover {
   --grad-color-1: #88d1e0;
 }
 
+#label-cor {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 .color-input {
   display: inline-block;
   width: 32px;
@@ -234,7 +265,7 @@ input[type="submit"]:hover {
 
 .custom:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 50px 5px #4e4e4e;
+  box-shadow: 0px 0px 12.5px 1.25px #4e4e4e;
 }
 
 .color-input:hover {
@@ -242,7 +273,7 @@ input[type="submit"]:hover {
 }
 
 .color-input:hover + .custom {
-  box-shadow: 0px 0px 50px 5px #4e4e4e;
+  box-shadow: 0px 0px 12.5px 1.25px #4e4e4e;
 }
 
 /* various id hacks to properly style each input element */
@@ -255,10 +286,9 @@ input[type="submit"]:hover {
 }
 .alinhar {
   position: relative;
+  margin-top: 20px;
   top: -50px;
-  margin-left: 10%;
 }
-
 footer {
   padding: 0;
   margin: 0;
@@ -268,6 +298,7 @@ footer {
 
 div#myFooter {
   width: 100%;
+  height: 100%;
 }
 div.box {
   margin-left: 30px;
