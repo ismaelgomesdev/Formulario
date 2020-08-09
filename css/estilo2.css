@@ -1,0 +1,86 @@
+@font-face {
+  font-family: PatuaOne;
+  src: url("../font/PatuaOne-Regular.ttf");
+}
+body {
+  border: 0;
+  padding: 0;
+  background-color: rgb(243, 249, 250);
+  background-image: url("../imagens/backg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: PatuaOne;
+  margin: 0;
+}
+
+div#box {
+  background-color: rgb(255, 255, 255);
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 16px 16px 48px #00000019;
+}
+
+div#box-dados {
+  text-align: center;
+}
+
+p#titulo {
+  font-size: 35px;
+}
+
+p#subtitulo {
+  font-size: 20px;
+  margin-top: -20px;
+  opacity: 0;
+  font-weight: 400;
+  font-size: 1.2em;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 1.25s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+p#subtitulo2 {
+  font-size: 15px;
+  margin-top: -10px;
+  opacity: 0;
+  font-weight: 400;
+  font-size: 1.2em;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 1.5s;
+}
+
+p#pag-inicial {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  font-size: 15px;
+}
+
+#titulo {
+  display: inline-block;
+  transform-origin: left;
+  text-transform: uppercase;
+  transform: scaleX(0);
+  animation: revealTextReverse 1s ease-in-out forwards;
+}
+@keyframes revealTextReverse {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+

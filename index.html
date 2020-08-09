@@ -19,7 +19,7 @@
       }
     </script>
 
-    <form action="index.html" id="formulario" method="POST">
+    <form action="agradecimento.html" id="formulario" method="POST">
       <div id="img">
         <div id="imgPreview">
           <img
@@ -37,7 +37,7 @@
       </div>
       <span id="titulo">Campanha Universitária Doar para Salvar</span>
       <p id="subtitulo">
-        A campanha ''doar para salvar'' é uma iniciativa que visa incentivar os
+        A campanha ''Doar para Salvar'' é uma iniciativa que visa incentivar os
         alunos da <br />
         UFC - Campus do Pici a doar sangue para as instituições mais carentes de
         Forta- <br />
@@ -129,10 +129,10 @@
               <label for="tempo-doacao">Quanto tempo está sem doar</label>
               <select id="tempo-doacao">
                 <option value="selecione">Selecione</option>
-                <option value="mes1">1 mês</option>
-                <option value="mes2">2 meses</option>
-                <option value="mes3">3 meses</option>
-                <option value="mes+">Mais</option>
+                <option value="1 mês">1 mês</option>
+                <option value="2 meses">2 meses</option>
+                <option value="2 meses">3 meses</option>
+                <option value="Mais de 3 meses">Mais</option>
               </select>
             </div>
           </div>
@@ -251,7 +251,7 @@
           </div>
         </div>
       </div>
-      <input type="submit" value="Enviar" />
+      <input type="submit" value="Enviar" onclick="mostrarDados()"/>
     </form>
     <footer>
       <div id="myFooter">
@@ -260,5 +260,35 @@
     </footer>
     <script src="js/regex.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      function mostrarDados(){
+        nome = document.getElementById('nome').value
+            cpf = document.getElementById('cpf').value
+            idade = document.getElementById('idade').value
+            peso = document.getElementById('peso').value
+            genero = document.getElementById('genero').value
+            doacao = document.getElementById('doacao').value
+            tempo_doacao = document.getElementById('tempo-doacao').value
+            tipo_sangue = document.getElementById('tipo-sangue').value
+            doenca = document.getElementById('doenca').value
+            vacina = document.getElementById('vacina').value
+            cor = document.getElementById('grad-input-1').value
+            email = document.getElementById('email').value
+            telefone = document.getElementById('telefone').value
+            endereco = document.getElementById('endereco').value
+            numero = document.getElementById('numero').value
+            cep = document.getElementById('cep').value
+            imagem = document.getElementById('imagem').value
+
+            window.alert("Nome: " + nome + "\n" + "CPF: " + cpf + "\n" +
+                "Idade: " + idade + "\n" + "peso: " + peso + "\n" +
+                "genero: " + genero + "\n" + "doacao: " + doacao + "\n" +
+                "Tempo sem doar: " + tempo_doacao + "\n" + "Tipo sanguíneo: " + tipo_sangue + "\n" +
+                "Doenca: " + doenca + "\n" + "Vacina: " + vacina + "\n" + "Cor: " + cor + "\n" +
+                "Email: " + email + "\n" + "Telefone: " + telefone + "\n" +
+                "Endereco: " + endereco + "\n" + "Numero: " + numero + "\n" +
+                "CEP: " + cep)
+      }
+    </script>
   </body>
 </html>
