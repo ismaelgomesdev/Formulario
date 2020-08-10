@@ -1,325 +1,343 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap");
 body {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: rgb(243, 249, 250);
-  background-image: url("../imagens/backg2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "PT Sans Narrow", sans-serif;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: rgb(243, 249, 250);
+    background-image: url("../imagens/backg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "PT Sans Narrow", sans-serif;
 }
 
 form#formulario {
-  background-color: rgb(255, 255, 255);
-  max-width: 800px;
-  margin: 0 auto;
-  margin-top: 40px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 16px 16px 48px #00000019;
-  opacity: 0;
-
-  animation: fadeIn 1s linear forwards;
-  animation-delay: 1s;
-}
-@keyframes fadeIn {
-  0% {
+    background-color: rgb(255, 255, 255);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 16px 16px 48px #00000019;
     opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1s;
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 div#imgPreview img {
-  height: 150px;
-  width: 150px;
-  padding: 20px;
-  object-fit: cover;
-  border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 div#imgEscolher input {
-  display: none;
+    display: none;
 }
 
 div#imgEscolher {
-  padding-top: 20px;
-  padding-bottom: 40px;
-  padding-right: 10px;
-  width: 130px;
-  margin-left: 45px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-right: 10px;
+    width: 130px;
+    margin-left: 45px;
 }
 
 div#imgEscolher label {
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
-  border: 1px solid rgba(102, 137, 146, 0.938);
-  border-radius: 30px;
-  padding: 10px;
-  border-color: #c70039;
-  transition: 0.3s;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid rgba(102, 137, 146, 0.938);
+    border-radius: 30px;
+    padding: 10px;
+    border-color: #c70039;
+    transition: 0.3s;
 }
 
 div#imgEscolher label:hover {
-  background: rgb(153, 0, 0);
-  color: whitesmoke;
+    background: rgb(153, 0, 0);
+    color: whitesmoke;
 }
 
 div.form-dados {
-  display: inline-block;
-  padding: 5px;
-  padding-bottom: 30px;
+    display: inline-block;
+    padding: 5px;
+    padding-bottom: 30px;
 }
 
 div.form-box input {
-  border: 0;
-  border-radius: 3px;
-  border: 1px solid rgba(102, 137, 146, 0.938);
-  height: 30px;
-  font-size: 16px;
-  outline: none;
-  transition: 0.3s;
-  padding-left: 15px;
-  color: #314458;
-  font-family: "PT Sans Narrow", sans-serif;
+    border: 0;
+    border-radius: 3px;
+    border: 1px solid rgba(102, 137, 146, 0.938);
+    height: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    padding-left: 15px;
+    color: #314458;
+    font-family: "PT Sans Narrow", sans-serif;
 }
 
 div.form-box input:focus {
-  border-color: #ff6347;
-  box-shadow: 0 0 8px 0 #ff6347;
+    border-color: #ff6347;
+    box-shadow: 0 0 8px 0 #ff6347;
 }
 
 div.form-box label,
 div.form-box input {
-  display: block;
+    display: block;
 }
 
 div.form-box label {
-  font-size: 18px;
-  padding-bottom: 5px;
-  font-family: "PT Sans Narrow", sans-serif;
-  color: #464953;
-  font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 5px;
+    font-family: "PT Sans Narrow", sans-serif;
+    color: #464953;
+    font-weight: 400;
 }
 
 div.form-box input#nome {
-  width: 500px;
-  margin-right: 40px;
+    width: 500px;
+    margin-right: 40px;
 }
 
 div.form-box input#cpf {
-  width: 140px;
+    width: 140px;
 }
 
 div.form-box input#idade {
-  margin-right: 80px;
+    margin-right: 80px;
 }
 
 div.form-box div#select-genero {
-  margin-left: 40px;
+    margin-left: 40px;
 }
 
 div.form-box select#doacao {
-  width: 215px;
-  margin-right: 70px;
+    width: 215px;
+    margin-right: 70px;
 }
 
 div.form-box select#tempo-doacao {
-  width: 240px;
-  margin-right: 20px;
+    width: 240px;
+    margin-right: 20px;
 }
 
 div.form-box select {
-  border: 0;
-  border-radius: 3px;
-  border: 1px solid rgba(102, 137, 146, 0.938);
-  height: 30px;
-  font-size: 16px;
-  color: #314458;
-  font-family: "PT Sans Narrow", sans-serif;
-  padding-left: 15px;
-  width: 150px;
-  outline: none;
+    border: 0;
+    border-radius: 3px;
+    border: 1px solid rgba(102, 137, 146, 0.938);
+    height: 30px;
+    font-size: 16px;
+    color: #314458;
+    font-family: "PT Sans Narrow", sans-serif;
+    padding-left: 15px;
+    width: 150px;
+    outline: none;
 }
+
 div.form-box select:focus {
-  border-color: #ff6347;
-  box-shadow: 0 0 8px 0 #ff6347;
+    border-color: #ff6347;
+    box-shadow: 0 0 8px 0 #ff6347;
 }
+
 div.form-box textarea#doenca {
-  border: 0;
-  border-radius: 3px;
-  border: 1px solid rgba(102, 137, 146, 0.938);
-  height: 70px;
-  width: 270px;
-  font-size: 16px;
-  outline: none;
-  transition: 0.3s;
-  padding-left: 15px;
-  color: #314458;
-  font-family: "PT Sans Narrow", sans-serif;
-  resize: none;
+    border: 0;
+    border-radius: 3px;
+    border: 1px solid rgba(102, 137, 146, 0.938);
+    height: 70px;
+    width: 270px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    padding-left: 15px;
+    color: #314458;
+    font-family: "PT Sans Narrow", sans-serif;
+    resize: none;
 }
 
 div.form-box textarea#doenca:focus {
-  border-color: #ff6347;
-  box-shadow: 0 0 8px 0 #ff6347;
+    border-color: #ff6347;
+    box-shadow: 0 0 8px 0 #ff6347;
 }
+
 div.form-box textarea#vacina {
-  border: 0;
-  border-radius: 3px;
-  border: 1px solid rgba(102, 137, 146, 0.938);
-  height: 70px;
-  width: 270px;
-  font-size: 16px;
-  outline: none;
-  transition: 0.3s;
-  padding-left: 15px;
-  margin-left: 70px;
-  color: #314458;
-  font-family: "PT Sans Narrow", sans-serif;
-  resize: none;
+    border: 0;
+    border-radius: 3px;
+    border: 1px solid rgba(102, 137, 146, 0.938);
+    height: 70px;
+    width: 270px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    padding-left: 15px;
+    margin-left: 70px;
+    color: #314458;
+    font-family: "PT Sans Narrow", sans-serif;
+    resize: none;
 }
 
 div.form-box textarea#vacina:focus {
-  border-color: #ff6347;
-  box-shadow: 0 0 8px 0 #ff6347;
+    border-color: #ff6347;
+    box-shadow: 0 0 8px 0 #ff6347;
 }
 
 #espac {
-  margin-left: 70px;
+    margin-left: 70px;
 }
+
 div.form-box label#contatos {
-  font-size: 40px;
-  margin-top: -50px;
-  margin-left: 20px;
-  margin-bottom: 20px;
+    font-size: 40px;
+    margin-top: -50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 div.form-box input#email {
-  width: 400px;
-  margin-right: 60px;
+    width: 400px;
+    margin-right: 60px;
 }
 
 div.form-box input#endereco {
-  width: 400px;
-  margin-right: 10px;
+    width: 400px;
+    margin-right: 10px;
 }
 
 div.form-box input#numero {
-  width: 80px;
-  margin-right: 10px;
+    width: 80px;
+    margin-right: 10px;
 }
 
 div.form-box input#cep {
-  width: 120px;
+    width: 120px;
 }
 
 input[type="submit"] {
-  border: 0;
-  border-radius: 12px;
-  background: rgb(153, 0, 0);
-  color: white;
-  font-size: 15px;
-  display: block;
-  margin: auto;
-  margin-top: 30px;
-  width: 200px;
-  padding: 10px;
-  cursor: pointer;
-  transition: 0.25s;
-  outline: none;
+    border: 0;
+    border-radius: 12px;
+    background: rgb(153, 0, 0);
+    color: white;
+    font-size: 15px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 200px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+    outline: none;
 }
 
 input[type="submit"]:hover {
-  background: red;
+    background: red;
 }
+
 :root {
-  /* set variables in the root so they can be accessed everywhere */
-  --grad-color-1: #88d1e0;
+    /* set variables in the root so they can be accessed everywhere */
+    --grad-color-1: #88d1e0;
 }
 
 #label-cor {
-  margin-top: 20px;
-  margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
+
 .color-input {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  border: none;
-  outline: none;
-  opacity: 0;
-  margin: 50px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: none;
+    outline: none;
+    opacity: 0;
+    margin: 50px;
 }
 
 .custom {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  margin-top: -96px;
-  margin-left: 38px;
-  border: 5px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-top: -96px;
+    margin-left: 38px;
+    border: 5px solid white;
 }
 
 .custom:hover {
-  cursor: pointer;
-  box-shadow: 0px 0px 12.5px 1.25px #4e4e4e;
+    cursor: pointer;
+    box-shadow: 0px 0px 12.5px 1.25px #4e4e4e;
 }
 
 .color-input:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-.color-input:hover + .custom {
-  box-shadow: 0px 0px 12.5px 1.25px #4e4e4e;
+.color-input:hover+.custom {
+    box-shadow: 0px 0px 12.5px 1.25px #4e4e4e;
 }
+
 
 /* various id hacks to properly style each input element */
+
 #grad-input-1 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 #custom-input-1 {
-  background-color: var(--grad-color-1);
+    background-color: var(--grad-color-1);
 }
+
 .alinhar {
-  position: relative;
-  margin-top: 20px;
-  top: -50px;
+    position: relative;
+    margin-top: 20px;
+    top: -50px;
 }
+
 footer {
-  padding: 0;
-  margin: 0;
-  height: 20px;
-  background-color: black;
-  color: whitesmoke;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    background-color: rgb(204, 44, 44);
+    color: whitesmoke;
 }
 
 div#myFooter {
-  width: 100%;
-  text-align: center;
-  height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
+
+div#myFooter p {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 17px;
+}
+
 div.box {
-  margin-left: 30px;
-  margin-top: -200px;
+    margin-left: 30px;
+    margin-top: -200px;
 }
 
 span#titulo {
-  position: relative;
-  top: -255px;
-  left: 350px;
-  font-size: 30px;
-  font-weight: 700;
+    position: relative;
+    top: -255px;
+    left: 350px;
+    font-size: 30px;
+    font-weight: 700;
 }
 
 p#subtitulo {
-  position: relative;
-  top: -240px;
-  left: 240px;
-  font-size: 20px;
-  text-align: justify;
+    position: relative;
+    top: -240px;
+    left: 240px;
+    font-size: 20px;
+    text-align: justify;
 }

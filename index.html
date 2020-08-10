@@ -1,268 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <title>Formulario</title>
     <link rel="stylesheet" href="css/estilo1.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-      function previewImagem(event) {
-        let myFile = new FileReader();
-        myFile.onload = function () {
-          let imagem = document.getElementById("imagem");
-          imagem.src = myFile.result;
-        };
-        myFile.readAsDataURL(event.target.files[0]);
-      }
+        function previewImagem(event) {
+            let myFile = new FileReader();
+            myFile.onload = function() {
+                let imagem = document.getElementById("imagem");
+                imagem.src = myFile.result;
+            };
+            myFile.readAsDataURL(event.target.files[0]);
+        }
     </script>
 
     <form action="agradecimento.html" id="formulario" method="POST">
-      <div id="img">
-        <div id="imgPreview">
-          <img
-            id="imagem"
-            src="imagens/mulher.png"
-            alt="icone-preview"
-            height="60px"
-            width="60px"
-          />
-        </div>
-        <div id="imgEscolher">
-          <label for="myImg">Enviar foto</label>
-          <input type="file" id="myImg" onchange="previewImagem(event)" />
-        </div>
-      </div>
-      <span id="titulo">Campanha Universitária Doar para Salvar</span>
-      <p id="subtitulo">
-        A campanha ''Doar para Salvar'' é uma iniciativa que visa incentivar os
-        alunos da <br />
-        UFC - Campus do Pici a doar sangue para as instituições mais carentes de
-        Forta- <br />
-        leza. Esse é um projeto de cunho academico que, além da coleta e da
-        entrega de <br />
-        sangue para unidades hospitalares, tem como objetivo avaliar, em um
-        período de <br />
-        quatro meses, a quantidade de universitários que tem o hábito de doar e
-        com que <br />
-        frequência praticam tal ato.
-      </p>
-      <div class="box">
-        <div class="form-dados">
-          <div class="form-box">
-            <label for="nome">Nome</label>
-            <input
-              type="text"
-              id="nome"
-              placeholder="Nome"
-              required="required"
-            />
-          </div>
-        </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <label for="cpf">CPF</label>
-            <input
-              type="text"
-              id="cpf"
-              placeholder="000.000.000-00"
-              class="regex"
-              data-js="cpf"
-              maxlength="14"
-            />
-          </div>
-        </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <label for="idade">Idade</label>
-            <input
-              type="text"
-              id="idade"
-              placeholder="Ex. 23"
-              data-js="idade"
-              class="regex"
-            />
-          </div>
-        </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <label for="peso">Peso</label>
-            <input
-              type="text"
-              id="peso"
-              placeholder="Ex. 62"
-              data-js="peso"
-              class="regex"
-            />
-          </div>
-        </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <div id="select-genero">
-              <label for="genero">Gênero</label>
-              <select id="genero">
-                <option value="selecione">Selecione</option>
-                <option value="masc">Masculino</option>
-                <option value="fem">Feminino</option>
-                <option value="outros">Outros</option>
-              </select>
+        <div id="img">
+            <div id="imgPreview">
+                <img id="imagem" src="imagens/mulher.png" alt="icone-preview" height="60px" width="60px" />
             </div>
-          </div>
-        </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <div id="select-doacao">
-              <label for="doacao">Já doou sangue?</label>
-              <select id="doacao">
-                <option value="selecione">Selecione</option>
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-              </select>
+            <div id="imgEscolher">
+                <label for="myImg">Enviar foto</label>
+                <input type="file" id="myImg" onchange="previewImagem(event)" />
             </div>
-          </div>
         </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <div id="select-tempo-doacao">
-              <label for="tempo-doacao">Quanto tempo está sem doar</label>
-              <select id="tempo-doacao">
-                <option value="selecione">Selecione</option>
-                <option value="1 mês">1 mês</option>
-                <option value="2 meses">2 meses</option>
-                <option value="2 meses">3 meses</option>
-                <option value="Mais de 3 meses">Mais</option>
-              </select>
+        <span id="titulo">Campanha Universitária Doar para Salvar</span>
+        <p id="subtitulo">
+            A campanha ''Doar para Salvar'' é uma iniciativa que visa incentivar os alunos da <br /> UFC - Campus do Pici a doar sangue para as instituições mais carentes de Forta- <br /> leza. Esse é um projeto de cunho academico que, além da coleta
+            e da entrega de <br /> sangue para unidades hospitalares, tem como objetivo avaliar, em um período de <br /> quatro meses, a quantidade de universitários que tem o hábito de doar e com que <br /> frequência praticam tal ato.
+        </p>
+        <div class="box">
+            <div class="form-dados">
+                <div class="form-box">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" placeholder="Nome" />
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <div id="select-tipo-sangue">
-              <label for="tipo-sangue">Tipo sanguíneo</label>
-              <select id="tipo-sangue">
-                <option value="selecione">Selecione</option>
-                <option value="a+">A+</option>
-                <option value="a-">A-</option>
-                <option value="b+">B+</option>
-                <option value="b-">B-</option>
-                <option value="ab+">AB+</option>
-                <option value="ab-">AB-</option>
-                <option value="o+">O+</option>
-                <option value="o-">O-</option>
-              </select>
+            <div class="form-dados">
+                <div class="form-box">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" placeholder="000.000.000-00" class="regex" data-js="cpf" maxlength="14" />
+                </div>
             </div>
-          </div>
-        </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <label for="idade">Idade</label>
+                    <input type="text" id="idade" placeholder="Ex. 23" data-js="idade" class="regex" />
+                </div>
+            </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <label for="peso">Peso</label>
+                    <input type="text" id="peso" placeholder="Ex. 62" data-js="peso" class="regex" />
+                </div>
+            </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <div id="select-genero">
+                        <label for="genero">Gênero</label>
+                        <select id="genero">
+                          <option value="selecione">Selecione</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <div id="select-doacao">
+                        <label for="doacao">Já doou sangue?</label>
+                        <select id="doacao">
+                          <option value="selecione">Selecione</option>
+                          <option value="sim">Sim</option>
+                          <option value="não">Não</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <div id="select-tempo-doacao">
+                        <label for="tempo-doacao">Quanto tempo está sem doar</label>
+                        <select id="tempo-doacao">
+                          <option value="selecione">Selecione</option>
+                          <option value="1 mês">1 mês</option>
+                          <option value="2 meses">2 meses</option>
+                          <option value="2 meses">3 meses</option>
+                          <option value="Mais de 3 meses">Mais</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <div id="select-tipo-sangue">
+                        <label for="tipo-sangue">Tipo sanguíneo</label>
+                        <select id="tipo-sangue">
+                          <option value="selecione">Selecione</option>
+                          <option value="A+">A+</option>
+                          <option value="A-">A-</option>
+                          <option value="B+">B+</option>
+                          <option value="B-">B-</option>
+                          <option value="AB+">AB+</option>
+                          <option value="AB-">AB-</option>
+                          <option value="O+">O+</option>
+                          <option value="O-">O-</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
-        <div class="form-dados">
-          <div class="form-box">
-            <label id="espacar" for="doenca"
-              >Você possui algum tipo de doença?</label
-            >
-            <textarea
-              id="doenca"
-              cols="30"
-              rows="10"
-              placeholder="Ex. Hepatite"
-            ></textarea>
-          </div>
-        </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <label id="espac" for="doenca"
-              >Você recebeu alguma vacina recentemente?</label
-            >
-            <textarea
-              id="vacina"
-              cols="30"
-              rows="10"
-              placeholder="Ex. Vacina contra gripe"
-            ></textarea>
-          </div>
-        </div>
-        <div class="form-dados alinhar">
-          <div class="form-box">
-            <label id="label-cor" for="grad-input-1"
-              >Selecione a sua cor favorita  <br>(PS: Você vai receber um brinde com esta cor)
-            </label>
-            <input
-              id="grad-input-1"
-              type="color"
-              value="#88d1e0"
-              class="color-input"
-            />
-            <div id="custom-input-1" class="custom"></div>
-          </div>
-        </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <label id="espacar" for="doenca">Você possui algum tipo de doença?</label>
+                    <textarea id="doenca" cols="30" rows="10" placeholder="Ex. Hepatite"></textarea>
+                </div>
+            </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <label id="espac" for="doenca">Você recebeu alguma vacina recentemente?</label>
+                    <textarea id="vacina" cols="30" rows="10" placeholder="Ex. Vacina contra gripe"></textarea>
+                </div>
+            </div>
+            <div class="form-dados alinhar">
+                <div class="form-box">
+                    <label id="label-cor" for="grad-input-1">Selecione a sua cor favorita  <br>(PS: Você vai receber um brinde com esta cor)</label>
+                    <input id="grad-input-1" type="color" value="#88d1e0" class="color-input" />
+                    <div id="custom-input-1" class="custom"></div>
+                </div>
+            </div>
 
-        <div class="form-box">
-          <label for="contatos" id="contatos">Contato</label>
+            <div class="form-box">
+                <label for="contatos" id="contatos">Contato</label>
+            </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="exemplo@gmail.com" />
+                </div>
+            </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" class="regex" data-js="telefone" placeholder="(00) 00000-0000" maxlength="15" />
+                </div>
+            </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <label for="endereco">Endeceço</label>
+                    <input type="text" id="endereco" placeholder="Rua Carvalho Mota" />
+                </div>
+            </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <label for="numero">Nº</label>
+                    <input type="text" id="numero" placeholder="Ex. 55" data-js="numero" class="regex" />
+                </div>
+            </div>
+            <div class="form-dados">
+                <div class="form-box">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" class="regex" data-js="cep" placeholder="00000-000" maxlength="9" />
+                </div>
+            </div>
         </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="exemplo@gmail.com" />
-          </div>
-        </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <label for="telefone">Telefone</label>
-            <input
-              type="text"
-              id="telefone"
-              class="regex"
-              data-js="telefone"
-              placeholder="(00) 00000-0000"
-              maxlength="15"
-            />
-          </div>
-        </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <label for="endereco">Endeceço</label>
-            <input type="text" id="endereco" placeholder="Rua Carvalho Mota" />
-          </div>
-        </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <label for="numero">Nº</label>
-            <input
-              type="text"
-              id="numero"
-              placeholder="Ex. 55"
-              data-js="numero"
-              class="regex"
-            />
-          </div>
-        </div>
-        <div class="form-dados">
-          <div class="form-box">
-            <label for="cep">CEP</label>
-            <input
-              type="text"
-              id="cep"
-              class="regex"
-              data-js="cep"
-              placeholder="00000-000"
-              maxlength="9"
-            />
-          </div>
-        </div>
-      </div>
-      <input type="submit" value="Enviar" onclick="mostrarDados()"/>
+        <input type="submit" value="Enviar" onclick="mostrarDados()" />
     </form>
     <footer>
-      <div id="myFooter">
-        <p>@Copyright 2020 CEOS Jr - Desenvolvido por Myka e Ismael</p>
-      </div>
+        <div id="myFooter">
+            <p>@Copyright 2020 CEOS Jr - Desenvolvido por Myka e Ismael</p>
+        </div>
     </footer>
     <script src="js/regex.js"></script>
     <script src="js/main.js"></script>
     <script>
-      function mostrarDados(){
-        nome = document.getElementById('nome').value
+        function mostrarDados() {
+            nome = document.getElementById('nome').value
             cpf = document.getElementById('cpf').value
             idade = document.getElementById('idade').value
             peso = document.getElementById('peso').value
@@ -281,14 +202,15 @@
             imagem = document.getElementById('imagem').value
 
             window.alert("Nome: " + nome + "\n" + "CPF: " + cpf + "\n" +
-                "Idade: " + idade + "\n" + "peso: " + peso + "\n" +
-                "genero: " + genero + "\n" + "doacao: " + doacao + "\n" +
+                "Idade: " + idade + "\n" + "Peso: " + peso + "\n" +
+                "Gênero: " + genero + "\n" + "Doação: " + doacao + "\n" +
                 "Tempo sem doar: " + tempo_doacao + "\n" + "Tipo sanguíneo: " + tipo_sangue + "\n" +
-                "Doenca: " + doenca + "\n" + "Vacina: " + vacina + "\n" + "Cor: " + cor + "\n" +
+                "Doença: " + doenca + "\n" + "Vacina: " + vacina + "\n" + "Cor: " + cor + "\n" +
                 "Email: " + email + "\n" + "Telefone: " + telefone + "\n" +
-                "Endereco: " + endereco + "\n" + "Numero: " + numero + "\n" +
+                "Endereco: " + endereco + "\n" + "Número: " + numero + "\n" +
                 "CEP: " + cep)
-      }
+        }
     </script>
-  </body>
+</body>
+
 </html>
